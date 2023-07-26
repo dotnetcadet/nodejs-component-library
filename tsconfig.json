@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "lib": [
+            "dom",
+            "esnext",
+            "dom.iterable"
+        ],
+        "importHelpers": true,
+        "declaration": true,
+        "sourceMap": true,
+        "rootDir": "./src",
+        "strict": true,
+        "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "downlevelIteration": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "target": "ESNext",
+        "allowJs": false,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue"
+    ],
+    "exclude": [
+        "tests",
+        "dist",
+        "node_modules"
+    ]
+}
