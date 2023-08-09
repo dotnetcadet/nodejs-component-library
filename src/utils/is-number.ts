@@ -1,0 +1,1 @@
+export const isNumber = (obj: any): obj is number => typeof obj === "number"

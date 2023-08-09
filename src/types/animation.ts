@@ -1,0 +1,1 @@
+export type Animation = 'spin' | 'ping' | 'pulse' | 'bounce'

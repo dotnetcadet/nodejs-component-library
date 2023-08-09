@@ -1,0 +1,1 @@
+export const isString = (obj: any): obj is string => typeof obj === "string"

@@ -1,0 +1,1 @@
+export const useClasses = (...classes: Array<boolean | string>) =>classes.filter(Boolean).join(' ').trim()

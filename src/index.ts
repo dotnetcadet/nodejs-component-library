@@ -1,3 +1,3 @@
 export * from './components'
-export * from './application'
+export type * from "./types"
 import './index.css'

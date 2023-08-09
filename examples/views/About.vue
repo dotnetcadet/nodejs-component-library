@@ -1,48 +1,43 @@
 <template>
-  <Form>
-    <FormTextArea 
-      :label="{
-        placement: 'top',
-        value: 'test'
-      }" 
-      :summary="{
-        placement: 'left',
-        value: 'Some info describing the Text Area'
-      }" 
-      :disabled="false" 
-      :rounded="'lg'" 
-      :onDisable="{
-        background: 'amber-900'
-      }"
-    />
-
-  </Form>
+  <Flex :padding="2" :spacing="{ vertical: 5 }">
+    <FlexColumn v-bind="column">
+      <Spinner />
+    </FlexColumn>
+    <FlexColumn v-bind="column">
+      <div>value 1</div>
+      <div>value 2</div>
+    </FlexColumn>
+  </Flex>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { Grid, GridColumn, Flex, FlexRow, FlexColumn, useAppConfig, FormTextArea, Form } from '../../src'
+import { defineComponent, ref } from 'vue'
+import { Flex, FlexRow, FlexColumn, Spinner, useAppConfig, FlexColumnConfig } from '../../src'
 
 export default defineComponent({
   components: {
-    Grid,
-    GridColumn,
     Flex,
     FlexRow,
-    FlexColumn,
-    Form,
-    FormTextArea
+    FlexColumn ,
+    Spinner
   },
   methods: {
     test(input: string) {
-      console.log(input)
+
     }
   },
   data() {
-
+    const text = ref('')
     const config = useAppConfig()
-
-    console.log(config)
+    const column: FlexColumnConfig = {
+      rounded: 'md',
+      padding: 2, 
+      background:'blue-400',
+      border: { color: 'blue-500', size: 1 },
+      shadow: { size: 'xl', color: 'blue-500'},
+    }
     return {
+      text,
+      column,
       items: [
         'Column 1',
         'Column 2',

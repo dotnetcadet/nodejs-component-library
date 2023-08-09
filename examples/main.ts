@@ -1,8 +1,9 @@
 import { appBuilder } from '../src'
-import { routing } from './configuration'
+import { routing, styling } from './configuration'
 import '../src/index.css'
 
 const builder = appBuilder()
+    .useStyling(styling)
     .useRouting(routing)
 
 const app = builder.build()
